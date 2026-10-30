@@ -122,6 +122,12 @@ remove an item that is done.
 - For this project the cloud is worth it for the activation-constraint and output-encoding
   comparisons: one run per variant, in parallel, on an A10.
 
+## Local Runs
+
+- Start every local training run, sweep or long analysis in tmux with `just bg <recipe> [args]`,
+  for example `just bg train --run-name wd1.0-seed0`. `tmux ls` lists the sessions and
+  `tmux attach -t <session>` watches one; each session's output is also in `runs/logs/`.
+
 ## Project Overview
 
 dead-reckoning-rnn is project 9 of 18 in the Latent Space Project: small ML repos that test whether
